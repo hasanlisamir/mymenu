@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Menu</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"
+    />
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar-container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid custom-padding d-flex justify-content-between align-items-center">
+                <a href="http://www.mymenu.az" class="navbar-brand">
+                    <img
+                        src="./Sources/Images/logo.png"
+                        alt="logo"
+                        width="80"
+                        height="69"
+                        class="d-inline-block align-text-top"
+                    />
+                </a>
+                <!-- Language changer -->
+                <div class="dropdown">
+                    <a
+                        class="btn btn-white dropdown-toggle"
+                        href="#"
+                        role="button"
+                        id="dropdownMenuLink"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        AZ
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li>
+                            <a
+                                class="dropdown-item disabled"
+                                href="#"
+                                tabindex="-1"
+                                aria-disabled="true"
+                            >AZ</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">EN </a></li>
+                    </ul>
+                </div>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav mx-auto d-flex justify-content-center">
+                        <div class="search mx-auto">
+                            <div class="search-inner">
+                                <form class="d-flex">
+                                    <input
+                                        id="js-rest-search"
+                                        type="text"
+                                        placeholder="Restoran və kafe adı axtarın"
+                                        class="ui-autocomplete-input"
+                                        autocomplete="off"
+                                    />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="navbar-right-link" href="/owner/">Şəxsi kabinet</a>
+            </div>
+        </nav>
+
+        <!-- Submenu -->
+
+        <div class="sub-nav d-flex justify-content-center">
+            <a href="#" class="sub-nav-link">Restoran Axtar</a>
+            <a href="#" class="sub-nav-link">Xəritədə Axtar</a>
+            <a href="#" class="sub-nav-link">Bloq Yazıları</a>
+            <a href="#" class="sub-nav-link">Haqqımızda</a>
+            <a href="#" class="sub-nav-link">Bizimlə Əlaqə</a>
+        </div>
+    </div>
+    <!-- Main -->
+    <main>
+        <div class="main-texts">
+            <p class="mainP">301+ RESTORAN VƏ KAFE</p>
+            <h1>Azərbaycan restoranlarını mymenu.az-da rahat tapa bilərsiniz</h1>
+        </div>
+        <div class="carousel-container">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./Sources/Images/447913064_1138186574112029_2054441866376992345_n.jpg" class="d-block w-100" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Sources/Images/baku-restaurants.jpg" class="d-block w-100" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Sources/Images/images.jpeg" class="d-block w-100" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Sources/Images/mari-vanna-2_photo_tom-marsden.webp" class="d-block w-100" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Sources/Images/qazmaq-oldtown-oldtownbaku.jpg" class="d-block w-100" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second search bar -->
+
+        <form action="/search" method="GET" class="search-form">
+            <div class="input-group mb-3 main-search-inner-input">
+                <input type="text" class="form-control rounded-start" placeholder="Restoran, kafe adı..." aria-label="Search input" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary rounded-end" type="submit" id="button-addon2">Axtar</button>
+            </div>
+        </form>
+        <div class="main-texts-after-search">
+            <h3>Kulinariya macəranızda yeni bir kəşf axtarışındasınız? Azərbaycan mətbəxi iştahaaçan yeməklər ilə zəngindir. Yeməklərin dadı bölgələrə görə dəyişir. Mymenu.az-dan istifadə edərək siz sevdiyiniz məkanı seçə və yeməklərin ləzzətindən həzz ala bilərsiniz.</h3>
+        </div>
+    </main>
+
+    <!-- Main end - section start -->
+
+    <section>
+        <div class="section-texts-left">
+            <h2>Yeni Restoranlar</h2>
+            <p>
+                Mymenu.az 301+ restoranı təqdim edir. 
+                <a class="view-all" href="/rest/">Hamısına Bax</a>
+            </p>
+        </div>
+        <div class="section-texts-right">
+            <a class="view-map" href="/rest/map/">Xəritədə Göstər</a>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <!-- Card1 -->
+
+    <section class="cards-section">
+        <div class="card" style="width: 18rem;">
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+            <img src="./Sources/Images/447913064_1138186574112029_2054441866376992345_n.jpg" class="card-img-top" alt="">
+        </button>
+            <div class="card-body">
+              <h5 class="card-title">Palazzo</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, voluptatibus!</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Xaqani 86D</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Xəritədə Göstər</a>
+              <a href="#" class="card-link">Google</a>
+            </div>
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Palazzo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="./Sources/Images/447913064_1138186574112029_2054441866376992345_n.jpg" class="card-img-top" alt="">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae reiciendis repellendus voluptatibus sed quam nobis atque ea esse dolore animi!</p>
+                        <p>Xaqani 86D</p>
+                        <p>Əlaqə nömrəsi: 0124153531</p>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- Card2 -->
+
+          <div class="card" style="width: 18rem;">
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+            <img src="./Sources/Images/indir.jpeg" class="card-img-top" alt="">
+        </button>
+            <div class="card-body">
+              <h5 class="card-title">KFC</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, obcaecati?</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Lorem ipsum dolor sit amet.</li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Xəritədə Göstər</a>
+                <a href="#" class="card-link">Google</a>
+            </div>
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel2">KFC</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="./Sources/Images/indir.jpeg" class="card-img-top" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, aliquid. Id officia iure eius voluptatibus dolorum! Error optio nostrum voluptatem!</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Əlaqə nömrəsi: 235983259</p>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- Card3 -->
+
+          <div class="card" style="width: 18rem;">
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+            <img src="./Sources/Images/indir (1).jpeg" class="card-img-top" alt="">
+        </button>
+            <div class="card-body">
+              <h5 class="card-title">McDonald's</h5>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, cum!</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Lorem ipsum dolor sit amet.</li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Xəritədə Göstər</a>
+                <a href="#" class="card-link">Google</a>
+            </div>
+            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel3">McDonald's</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="./Sources/Images/indir (1).jpeg" class="card-img-top" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, aliquid. Id officia iure eius voluptatibus dolorum! Error optio nostrum voluptatem!</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Əlaqə nömrəsi: 346247224</p>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- Card4 -->
+
+          <div class="card" style="width: 18rem;">
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+            <img src="./Sources/Images/indir (2).jpeg" class="card-img-top" alt="">
+        </button>
+            <div class="card-body">
+              <h5 class="card-title">Shaurma No.1</h5>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, ipsum?</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Lorem ipsum dolor sit amet.</li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Xəritədə Göstər</a>
+                <a href="#" class="card-link">Google</a>
+            </div>
+            <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel4">Shaurma No.1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="./Sources/Images/indir (2).jpeg" class="card-img-top" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, aliquid. Id officia iure eius voluptatibus dolorum! Error optio nostrum voluptatem!</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Əlaqə nömrəsi: 56636473</p>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+          </div>
+    </section>
+
+    <!-- Article -->
+
+    <article class="article-container">
+        <div class="article-left">
+            <div class="article-left-title">            
+                <h2>Haqqımızda</h2>
+            </div>
+            <div class="article-left-content">
+                <p>Azərbaycan zəngin və qədim mətbəxə sahibdir. Bəzən eyni adlı yeməklərin regiona görə təamı fərqlənir. Bu isə yerli və xarici turistlərin regionlarda fərqli təamların dadına baxmaq istəyini yaradır. Yerli və xarici turistlərin iştirak etdiyi sorğulara əsasən, regionlarda xidmət göstərən ictimai iaşə obyektləri haqqında məlumatların tapılmasında, xarici qonaqların buradakı xidmətlərdən istifadəsində çətinliklər müəyyən edilmişdir. Bu çətinliklərin aradan qaldırılması və turistlərin səfər məmnuniyyətinin artırılması üçün Dövlət Turizm Agentliyi tərəfindən “Mymenu.az” layihəsi həyata keçirilir. </p>
+            </div>
+            <button type="button" class="btn btn-lg rounded-pill">Daha ətraflı oxu</button>
+        </div>
+
+        <div class="article-right">
+            <div class="article-right-title">
+                <h2>Keçidlər</h2>
+            </div>
+            <div class="article-right-content">
+            <div class="image-row">
+                <a href="https://azerbaijan.travel/">
+                <img src="./Sources/Images/azerbaijan.travel.png" alt="">
+                </a>
+                <a href="https://www.tourism.gov.az/">
+                <img src="./Sources/Images/tourism.png" alt="">
+                </a>
+            </div>
+            <div class="image-row">
+                <a href="https://sahman.az/">
+                <img src="./Sources/Images/ref1.png" alt="">
+                </a>
+                <a href="https://tourism.gov.az/voluntourism/">
+                <img src="./Sources/Images/tkt-az.png" alt="">
+                </a>
+            </div>
+        </div>
+    </article>
+    
+    <!--Footer-->
+
+    <footer class="footer-container">
+        <div class="footer-left">
+            <ul>
+                <li><img src="./Sources/Images/logo.png" alt=""></li>
+                <li><p>Bütün hüquqlar qorunur © 2024</p></li>
+                <li><p>Designed & Developed by Triton Consulting MMC & Crocusoft MMC    </p></li>
+            </ul>
+        </div>
+        <div class="footer-middle-left">
+            <ul>
+                <li><p>Mymenu.az</p></li>
+                <li><a href="#" class="disabled-link"> Ana Səhifə</a></li>
+                <li><a href="#" class="disabled-link"> Restoran Axtar</a></li>
+                <li><a href="#" class="disabled-link"> Xəritədə Axtar</a></li>
+                <li><a href="#" class="disabled-link"> Haqqımızda</a></li>
+                <li><a href="#" class="disabled-link"> Bizimlə Əlaqə</a></li>
+                <li><a href="#" class="disabled-link"> Gizlilik Siyasəti</a></li>
+            </ul>
+        </div>
+        <div class="footer-middle-right">
+            <ul>
+                <li><p>Faydalı keçidlər</p></li>
+                <li><a href="https://tourism.gov.az/" class="disabled-link"> Dövlət Turizm Agentliyi</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <p>Sosial Media</p>
+            <ul>
+                <li><i class="fab fa-facebook-f"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-linkedin-in"></i></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
